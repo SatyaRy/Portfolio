@@ -1,0 +1,41 @@
+@import "./Variable.scss";
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, $main,$light);
+    font-family: $font-sans;
+    display: flex;
+    flex-direction: column;
+}
+.contentContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    .mainContent{
+        width: 100%;
+        height: 90%;
+        border-radius: 10px;
+        display: flex;
+        border: solid white;
+        flex-direction: column;
+        border-top: none;
+        .bar{
+            border-bottom: solid white;
+            background-color: rgb(213, 213, 213);
+            border-radius: 10px;
+            border-radius: 10px 10px 0px 0px;
+            width: 100%;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            padding: 0px 2vh 0px 2vh;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+@import "./Variable.scss";
+.mainMenu{
+    display: flex;
+    width: 10%;
+    flex-direction: column;
+    height: 100%;
+    color: $white;
+}
+.contactLink{
+    display: flex;
+    gap: 20px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 10px;
+    .icon{
+        position: relative;
+        bottom: 0px;
+    }
+}
+.menuBox{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    .smallBox{
+        border: 0.5px solid $white;
+
+    }
+}

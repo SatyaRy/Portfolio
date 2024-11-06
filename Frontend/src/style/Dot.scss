@@ -1,0 +1,17 @@
+.mainDot{
+    display: flex;
+    gap: 20px;
+    width: 45%;
+}
+.dot{
+    width: 15px;
+    height: 15px;
+    border: none;
+    border-radius: 50%;
+    background-color: red;
+}
+.folder{
+    display: flex;
+    gap: 20px;
+    color: black;
+}
