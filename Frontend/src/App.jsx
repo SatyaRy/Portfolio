@@ -2,16 +2,18 @@ import {RouterProvider, createBrowserRouter,Outlet} from "react-router-dom"
 import "./style/Global.scss"
 import Navbar from "./components/Navbar"
 import Menu from "./components/Menu"
-import About from "./components/About"
+import Landing from "./components/Landing"
 import Dot from "./components/DotModel"
 import Folder from "./components/Folder"
+import About from "./pages/About"
+import Project from "./pages/Project"
+import Skill from "./pages/Skill"
 function App() {
   const Layout =()=>{
     return(
             <div className ="container">
-                <Navbar/>
                 <div className ="contentContainer">
-                   <Menu/>
+                  <Menu/>
                    <div className="mainContent">
                       <div className ="bar">
                         <Dot/>
@@ -19,7 +21,6 @@ function App() {
                       </div>
                       <Outlet/>
                    </div>
-                   <Menu/>
                 </div>
             </div>
     )
@@ -30,9 +31,22 @@ function App() {
       element: <Layout/>,
       children:[
         {
-          path: "/about",
+          path: "/",
+          element: <Landing/>
+        },
+        {
+          path: "/About",
           element: <About/>
+        },
+        {
+          path: "/Projects",
+          element: <Project/>
+        },
+        {
+          path: "/Skill",
+          element: <Skill/>
         }
+
       ]
     }
   ])

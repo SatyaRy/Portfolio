@@ -1,14 +1,25 @@
 import "../style/Menu.scss"
-import { LuGithub } from "react-icons/lu";
-import { CiLinkedin } from "react-icons/ci";
-import { TbBrandTelegram } from "react-icons/tb";
-import { RiFacebookBoxLine } from "react-icons/ri";
+import { VscVscodeInsiders } from "react-icons/vsc";
+import { IoTerminal } from "react-icons/io5";
+import { FaGithubSquare } from "react-icons/fa";
+import {Link, useNavigate} from "react-router-dom"
+import { FaHome } from "react-icons/fa";
+import {motion} from "framer-motion"
 export default function Menu(){
+    const navigate = useNavigate()
+    const handleClick = (link)=>{
+        navigate(`${link}`)
+    }
     return(
             <div className ="mainMenu">
                <div className ="contactLink">
                     {contactLink.map((value)=>(
-                        <div key={value.id} className ="icon">{value.image}</div>
+                        <motion.div 
+                        whileTap={{boxShadow:"0px 0px 0px grey"}}
+                        whileHover={{boxShadow:"3px 3px 0px grey"}}
+                        key={value.id} className ="icon" onClick={()=>{handleClick(value.link)}}>
+                             {value.image}
+                        </motion.div>
                     )
                     )}
                </div>
@@ -18,18 +29,22 @@ export default function Menu(){
 const contactLink =[
     {
         id: 1,
-        image: <LuGithub fontSize={"2rem"}/>,
+        link: "/",
+        image: <FaHome fontSize={"3.5rem"} color="#181C14"/>,
     },
     {
         id: 2,
-        image: <CiLinkedin fontSize={"2rem"}/>,
+        link: "/about",
+        image: <IoTerminal fontSize={"3.5rem"} color="black"/>,
     },
     {
         id: 3,
-        image: <TbBrandTelegram fontSize={"2rem"}/>,
+        link: "/skill",
+        image: <VscVscodeInsiders fontSize={"3.5rem"} color ="#0078d7"/>,
     },
     {
         id: 4,
-        image: <RiFacebookBoxLine fontSize={"2rem"}/>,
-    }
+        link: "/projects",
+        image: <FaGithubSquare fontSize={"3.5rem"} color ="#6e5494"/>,
+    },
 ]

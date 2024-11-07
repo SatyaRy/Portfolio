@@ -8,24 +8,34 @@
 }
 .contactLink{
     display: flex;
-    gap: 20px;
+    gap: 25px;
     height: 100%;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
-    padding-bottom: 10px;
+    padding-left: 10px;
     .icon{
-        position: relative;
-        bottom: 0px;
+        display: flex;
+        align-items: end;
+        height: 60px;
+        width: 60px;
+        justify-content: center;
+        border:  none;
+        align-items: center;
+        border-radius: 10px;
+        background-color: $white;
     }
 }
-.menuBox{
-    width: 100%;
-    height: 30%;
-    display: flex;
-    justify-content: center;
-    .smallBox{
-        border: 0.5px solid $white;
 
+@media (max-width: 1180px) {
+    .mainMenu{
+        width: 100%;
+        align-items:center ;
+        padding-bottom: 2vh;
+    }
+    .contactLink{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
     }
 }

@@ -17,6 +17,7 @@
     height: 100%;
     display: flex;
     justify-content: space-between;
+    padding-top: 5vh;
     .mainContent{
         width: 100%;
         height: 90%;
@@ -25,17 +26,33 @@
         border: solid white;
         flex-direction: column;
         border-top: none;
+        margin-right: 5vh;
         .bar{
             border-bottom: solid white;
             background-color: rgb(213, 213, 213);
             border-radius: 10px;
             border-radius: 10px 10px 0px 0px;
             width: 100%;
-            height: 35px;
+            height: 40px;
             display: flex;
             align-items: center;
             justify-content: start;
-            padding: 0px 2vh 0px 2vh;
+            padding: 2vh;
+        }
+    }
+}
+
+@media (max-width: 1180px) {
+    .container{
+        padding-top: 2vh;
+        height:auto;
+        padding-bottom: 2vh;
+    }
+    .contentContainer{
+        flex-direction: column;
+        padding-top: 0vh;
+        .mainContent{
+            border: none;
         }
     }
 }

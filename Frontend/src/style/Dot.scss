@@ -2,13 +2,17 @@
     display: flex;
     gap: 20px;
     width: 45%;
+    
 }
 .dot{
     width: 15px;
     height: 15px;
     border: none;
     border-radius: 50%;
-    background-color: red;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .folder{
     display: flex;
