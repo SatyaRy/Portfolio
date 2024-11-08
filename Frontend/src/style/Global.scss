@@ -44,15 +44,29 @@
 
 @media (max-width: 1180px) {
     .container{
-        padding-top: 2vh;
         height:auto;
         padding-bottom: 2vh;
     }
     .contentContainer{
-        flex-direction: column;
+        flex-direction: column-reverse;
         padding-top: 0vh;
         .mainContent{
             border: none;
+            .bar{
+                border-radius: 0px;
+                justify-content: space-between;
+            }
         }
+    }
+}
+
+@media (max-width: 640px) {
+    .contentContainer{
+        .mainContent{
+            .bar{
+                border-radius: 0px;
+                justify-content: space-between;
+            }
+          }
     }
 }

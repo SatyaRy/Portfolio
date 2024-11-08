@@ -108,19 +108,25 @@
         padding: 0px;
         width: 90%;
         padding-top: 2vh;
+        height: 100vh;
+        justify-content: center;
     }
     .react3d{
         width: 100%;
         align-items: start;
         height: 50%;
+        display: none;
     }
 }
 
 /* md */
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+}
 
 /* sm */
-@media (max-width: 640px) {}
+@media (max-width: 640px) {
+   
+}
 
 /* xs */
 @media (max-width: 475px) {}
