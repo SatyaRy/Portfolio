@@ -1,0 +1,48 @@
+@import "./Variable.scss";
+.projectShow{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 5vh;
+    justify-content: start;
+    gap: 20px;
+    flex-direction: column;
+}
+.projectBox{
+    width: 400px;
+    height: 200px;
+    border-radius: 10px;
+    border: solid white;
+    display: flex;
+    padding: 2vh;
+    flex-direction: column;
+    gap:15px;
+    .projectName{
+        width: 100%;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        span{
+            font-size: 1.2rem;
+            color: $softlight;
+        }
+    }
+    .projectDescription{
+        width: 100%;
+        height: 60px;
+        span{
+            color: $softlight;
+            font-size: 1rem;
+        }
+    }
+}
+
+
+.projectMenu{
+    width: 100%;
+    height: 50px;
+    color: $white;
+    font-family: $font-sans;
+    font-size: 1.5rem;
+}

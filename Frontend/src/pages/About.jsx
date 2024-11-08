@@ -62,6 +62,10 @@ export default function About(){
                            
                        </>
                     :null}     
+                  {isAnimated?  
+                    <div className="offTerminal" >
+                        <motion.button whileHover={{scaleY:"1.05",boxShadow: "3px 3px 0px #64ffda"}} whileTap={{boxShadow: "0px 0px 0px #64ffda"}} >Turn off Terminal Version</motion.button>
+                    </div>: null}
                 </div>
                 <div className="imageAS">
                     <img src={bear} alt="" />

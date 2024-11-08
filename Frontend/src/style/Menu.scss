@@ -34,8 +34,17 @@
         padding-bottom: 2vh;
     }
     .contactLink{
+        width: 90%;
+        padding: 10px;
+        border-radius: 10px;
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        justify-content: space-evenly;
+        border: solid $green;
+        background-color: $main;
+        .icon{
+            background-color: $white;
+        }
     }
 }
