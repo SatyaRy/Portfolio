@@ -1,0 +1,111 @@
+@import "./Variable.scss";
+.realContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: scroll;
+}
+.realAbout{
+    width: 30%;
+    height: 100%;
+    .realProfile{
+        width: 100%;
+        height: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: solid $green;
+        }
+    }
+    .realFollower{
+        width: 100%;
+        height: 10%;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        button{
+            width: 140px;
+            height: 40px;
+            border: solid $green;
+            border-radius: 5px;
+            background: none;
+            color: $softlight;
+            font-size: 1rem;
+        }
+    }
+    .realDescription{
+        width: 100%;
+        height: 50%;
+        padding-left: 40px;
+        padding-right: 40px;
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        .shortInfo{
+            color: $softlight;
+            font-size: 1.2rem;
+        }
+        .realDetail{
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 20px;
+            span{
+                color: $softlight;
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+.projectOverview{
+    width: 70%;
+    height: auto;
+    overflow: scroll;
+    .projectContainer{
+        width: 100%;
+        height: 60vh;
+        display: flex;
+        padding: 5vh;
+        justify-content: space-between;
+        &:nth-child(4){
+            padding: 2vh;
+            height: auto;
+        }
+    
+    }
+
+}
+
+@media (max-width: 1180px) {
+   .realContainer{
+     flex-direction: column;
+     padding-top: 2vh;
+     height: 150vh;
+   }
+   .realAbout{
+    width: 100%;
+    height: 50%;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+     .realProfile{
+        gap: 10px;
+        img{
+            width: 180px;
+            height: 180px;
+        }
+     }
+   }
+   .realTech{
+     width: 100%;
+     height: 50%;
+    .realCover{
+    }
+}
+}

@@ -6,8 +6,8 @@ import Landing from "./components/Landing"
 import Dot from "./components/DotModel"
 import Folder from "./components/Folder"
 import About from "./pages/About"
-import Project from "./pages/Project"
 import Skill from "./pages/Skill"
+import AboutReal from "./pages/AboutR"
 function App() {
   const Layout =()=>{
     return(
@@ -40,11 +40,15 @@ function App() {
         },
         {
           path: "/Projects",
-          element: <Project/>
+          element: <About/>
         },
         {
-          path: "/Skill",
-          element: <Skill/>
+          path: "/skill",
+          element: <AboutReal/>
+        },
+        {
+          path: "/offTerminal",
+          element: <AboutReal/>
         }
 
       ]

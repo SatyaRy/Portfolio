@@ -1,5 +1,4 @@
 import "../style/Landing.scss"
-import Python from "../../public/python/Python"
 import { Canvas } from "@react-three/fiber"
 import { Environment, OrbitControls,Float } from "@react-three/drei"
 import { AmbientLight } from "three"

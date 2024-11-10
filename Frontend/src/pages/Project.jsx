@@ -1,24 +1,32 @@
 import "../style/Project.scss"
 import { IoMdLink } from "react-icons/io";
-export default function Project(){
-    const data = "The Resort Finder App is a user-friendly platform designed to help travelers discover the perfect resort for their next vacation"
-    return(
-            <div className ="projectShow">
-                <div className ="projectMenu">
-                    <span>My Personal Project</span>
-                </div>
-                <div className ="projectBox">
-                    <div className ="projectName">
-                        <IoMdLink color="#8892b0" fontSize={"1.5rem"}/>
-                        <span>Resort Finder</span>
+import { FaArrowRightLong } from "react-icons/fa6";
+import iphone from "../assets/technology/ui.png"
+import iphone1 from "../assets/technology/ui1.png"
+export const ProjectFeature = ({firstUI,secondUI})=>{
+    return (
+            <div className ="projectUI">
+                    <div className="borderProject">
+                        <div className="projectShow">
+                        <img src={firstUI} alt="" />
+                        <img src={secondUI} alt="" />
+                        </div>
                     </div>
-                    <div className ="projectDescription">
-                        <span>{data}</span>
-                    </div>
-                    <div className ="projectTech">
+            </div>
+    )
+}
 
-                    </div>
-                </div>
+export const ProjectDetail = ({name, detail}) =>{
+    return(
+            <div className ="projectDescription">
+                <span>{name}</span>
+                <span>
+                   {detail}
+                </span>
+                <button className="readMore">
+                    <span style={{color:"#8892b0",fontSize:"1.2rem"}}>Read Me</span>     
+                    <FaArrowRightLong color="#8892b0" fontSize={"1.2rem"}/>
+                </button>
             </div>
     )
 }

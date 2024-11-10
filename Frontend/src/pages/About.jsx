@@ -2,7 +2,7 @@ import {useMotionValue,useTransform, animate,motion} from "framer-motion"
 import { useEffect,useState} from "react";
 import "../style/About.scss"
 import bear from "../assets/bear.svg"
-import satyaRy from "../assets/satyaR.png"
+import { description } from "../data/Detail";
 import { useNavigate } from "react-router-dom";
 export default function About(){
     const navigate = useNavigate()
@@ -64,7 +64,7 @@ export default function About(){
                     :null}     
                   {isAnimated?  
                     <div className="offTerminal" >
-                        <motion.button whileHover={{scaleY:"1.05",boxShadow: "3px 3px 0px #64ffda"}} whileTap={{boxShadow: "0px 0px 0px #64ffda"}} >Turn off Terminal Version</motion.button>
+                        <motion.button whileHover={{scaleY:"1.05",boxShadow: "3px 3px 0px #64ffda"}} whileTap={{boxShadow: "0px 0px 0px #64ffda"}} onClick={()=>{navigate("/offTerminal")}}>Turn off Terminal Version</motion.button>
                     </div>: null}
                 </div>
                 <div className="imageAS">
@@ -73,79 +73,3 @@ export default function About(){
             </div>
     )
 }
-
-
-const description = [
-    {
-        id: 1,
-        detail: "# User Profile: Ry Satya",
-    },
-    {
-        id: 2,
-        detail: "> Name: Ry Satya",
-    },
-    {
-        id: 3,
-        detail: "> Major: Software Engineer  ",
-    },
-    {
-        id: 4,
-        detail: "> Age: 19 (Born: Oct 31, 2005)  ",
-    },
-    {
-        id: 5,
-        detail: "> Address: Boeung Chhuk village,  Niroth commune, Cbar ompov  district, Phnom Penh",
-    },
-    {
-        id: 6,
-        detail: "## 📌 Objective:",
-    },
-    {
-        id: 7,
-        detail: "I want to develop impactful software solutions that bridge gaps in education and technology, while continuously honing technical expertise and contributing to meaningful project",
-    },
-    {
-        id: 8,
-        detail: "-----------------------------------",
-    },
-    {
-        id: 9,
-        detail: "## 👾 Technical Skills:",
-    },
-    {
-        id: 10,
-        detail: "> Languages: JavaScript, TypeScript, Python  ",
-    },
-    {
-        id: 11,
-        detail: "> Frontend: React, Zustand, ",
-    },
-    {
-        id: 12,
-        detail: "> Backend: Python, Node.js, Firebase",
-    },
-    {
-        id: 13,
-        detail: "> Framework & Libraries: Framer motion, FastAPI",
-    },
-    {
-        id: 14,
-        detail: "> Databases: Firestore, MongoDB  PostgreSQL",
-    },
-    {
-        id: 15,
-        detail: "> Version Control: Git, GitHub  ",
-    },
-    {
-        id: 16,
-        detail: "> Other Tools: Vite, Figma, Postman",
-    },
-    {
-        id: 17,
-        detail: "-----------------------------------",
-    },
-    {
-        id: 18,
-        detail:"[user@Users-MacBook-Pro/Satyary@217 ~ % Type cd projects to check projects",
-    },
-]

@@ -1,14 +1,12 @@
 import "../style/Dot.scss"
 import {motion} from "framer-motion"
 import { useState } from "react"
-import { ImCross } from "react-icons/im";
-import { FaMinus } from "react-icons/fa";
-import { PiCaretUpDownFill } from "react-icons/pi";
+import { MacSymbol } from "../data/Detail"
 export default function DotModel(){
     const [isHover, setIsHover] = useState(false)
     return(
             <div className ="mainDot">
-              {childSymbol.map((value,index)=>(
+              {MacSymbol.map((value,index)=>(
                 <motion.div 
                 onMouseLeave={()=>{setIsHover(false)}}
                 key={index}
@@ -21,17 +19,3 @@ export default function DotModel(){
             </div>
     )
 }
-const childSymbol = [
-  {
-    background: "#EE4E4E",
-    icon: <ImCross fontSize={"10px"}/>
-  },
-  {
-    background: "#FABC3F",
-    icon: <FaMinus fontSize={"12px"}/>
-  },
-  {
-    background: "#A1DD70",
-    icon: <PiCaretUpDownFill fontSize={"12.5px"}/>
-  },
-]
