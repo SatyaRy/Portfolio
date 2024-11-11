@@ -66,10 +66,10 @@
 .projectOverview{
     width: 70%;
     height: auto;
-    overflow: scroll;
+    padding-top: 2vh;
     .projectContainer{
         width: 100%;
-        height: 60vh;
+        height: 50vh;
         display: flex;
         padding: 5vh;
         justify-content: space-between;
@@ -85,27 +85,53 @@
 @media (max-width: 1180px) {
    .realContainer{
      flex-direction: column;
-     padding-top: 2vh;
      height: 150vh;
+     padding-top: 2vh;
    }
    .realAbout{
-    width: 100%;
-    height: 50%;
-    gap: 20px;
-    display: flex;
-    flex-direction: column;
-     .realProfile{
-        gap: 10px;
-        img{
-            width: 180px;
-            height: 180px;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        .realProfile{
+            height: 200px;
         }
+        .realProfile{
+            gap: 10px;
+            img{
+                width: 180px;
+                height: 180px;
+            }
+        }
+        .realFollower{
+            height: 60px;
+        }
+   }
+   .projectOverview{
+     width: 100%;
+     height: auto;
+     .projectContainer{
+        height: 50vh;
+        align-items: center;
      }
    }
-   .realTech{
-     width: 100%;
-     height: 50%;
-    .realCover{
+   
+}
+@media (min-width: 1180px){
+    .projectOverview{
+        overflow: scroll;
+    
     }
 }
+@media (max-width: 768px){
+    .projectOverview{
+        padding: 0;
+        .projectContainer{
+            height:35%;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+         }
+    }
 }

@@ -24,9 +24,10 @@ export const ProjectDetail = ({name, detail}) =>{
                    {detail}
                 </span>
                 <button className="readMore">
-                    <span style={{color:"#8892b0",fontSize:"1.2rem"}}>Read Me</span>     
+                    <span className="readButton">Read Me</span>     
                     <FaArrowRightLong color="#8892b0" fontSize={"1.2rem"}/>
                 </button>
             </div>
     )
 }
+

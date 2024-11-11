@@ -5,8 +5,11 @@ import iphone from "../assets/technology/ui.png"
 import iphone1 from "../assets/technology/ui1.png"
 import {motion} from "framer-motion"
 import  { ProjectDetail,ProjectFeature }  from "./Project";
+import {useMediaQuery} from "react-responsive"
 import Skill from "../pages/Skill"
 export default function AboutReal(){
+    const isDesktop = useMediaQuery({query:"(min-width: 1180px "})
+    const isMobile = useMediaQuery({query:"(max-width: 768px "})
     const data = "I'm building up my knowledge and abilities to prepare for a future as an engineer."
     const serksa = "SerkSa App"
     const serksaDetail = "SerkSa is a gamified app that transforms self-learning for high school students with structured lessons, foundational skill-building, and interactive games that keep them motivated."
@@ -35,15 +38,25 @@ export default function AboutReal(){
                 <div className ="projectOverview">
                     <div className ="projectContainer">            
                         <ProjectDetail name={serksa} detail={serksaDetail}/>
-                        <ProjectFeature firstUI={iphone} secondUI={iphone1}/>
+                        <ProjectFeature/>
                     </div>
                     <div className ="projectContainer">  
-                        <ProjectFeature firstUI={iphone} secondUI={iphone1}/>
-                        <ProjectDetail name={serksa} detail={serksaDetail}/>
+                       {isMobile? 
+                        <>
+                            <ProjectDetail name={serksa} detail={serksaDetail}/>
+                            <ProjectFeature />
+                        </>
+                        :
+                        <>
+                            <ProjectFeature />
+                            <ProjectDetail name={serksa} detail={serksaDetail}/>
+                        </>
+
+                    }
                     </div>
                     <div className ="projectContainer">  
                         <ProjectDetail name={serksa} detail={serksaDetail}/>
-                        <ProjectFeature firstUI={iphone} secondUI={iphone1}/>
+                        <ProjectFeature />
                     </div>
                     <div className ="projectContainer">
                         <Skill/>

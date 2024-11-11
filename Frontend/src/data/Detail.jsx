@@ -38,8 +38,8 @@ export const SkillDetail = [
     },
     {
         id: 4,
-        name: "GoLang",
-        icon: go,
+        name: "React",
+        icon: react,
     },
     {
         id: 5,
