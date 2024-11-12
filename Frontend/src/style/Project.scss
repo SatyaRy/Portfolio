@@ -18,7 +18,7 @@
         }
     }
     .readMore{
-        width: 40%;
+        width: 50%;
         height: auto;
         display: flex;
         gap: 20px;
@@ -131,4 +131,14 @@
             height: 100%;
         }
     }
+    .projectDescription{
+        .readMore{
+            width: 120px;
+            padding: 10px;
+            .readButton{
+                font-size: 0.8rem;
+            }
+        }
+    }
+   
 }
