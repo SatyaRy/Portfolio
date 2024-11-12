@@ -1,6 +1,7 @@
 import "../style/AboutR.scss"
 import satya from "../assets/satyaR.svg"
 import { icon} from "../data/Detail";
+import { SERKSADETAIL,SERKSANAME,TOSDERNAME,TOSDERDETAIL,EXPENSE,EXPENSEDETAIL } from "../data/Contant";
 import iphone from "../assets/technology/ui.png"
 import iphone1 from "../assets/technology/ui1.png"
 import {motion} from "framer-motion"
@@ -11,8 +12,6 @@ export default function AboutReal(){
     const isDesktop = useMediaQuery({query:"(min-width: 1180px "})
     const isMobile = useMediaQuery({query:"(max-width: 768px "})
     const data = "I'm building up my knowledge and abilities to prepare for a future as an engineer."
-    const serksa = "SerkSa App"
-    const serksaDetail = "SerkSa is a gamified app that transforms self-learning for high school students with structured lessons, foundational skill-building, and interactive games that keep them motivated."
     return (
             <div className ="realContainer">
                 <div className ="realAbout">
@@ -36,26 +35,27 @@ export default function AboutReal(){
                     </div>
                 </div>
                 <div className ="projectOverview">
-                    <div className ="projectContainer">            
-                        <ProjectDetail name={serksa} detail={serksaDetail}/>
+                    <div
+                        className ="projectContainer">            
+                        <ProjectDetail name={SERKSANAME} detail={SERKSADETAIL}/>
                         <ProjectFeature/>
                     </div>
                     <div className ="projectContainer">  
                        {isMobile? 
                         <>
-                            <ProjectDetail name={serksa} detail={serksaDetail}/>
+                            <ProjectDetail name={TOSDERNAME} detail={TOSDERDETAIL}/>
                             <ProjectFeature />
                         </>
                         :
                         <>
                             <ProjectFeature />
-                            <ProjectDetail name={serksa} detail={serksaDetail}/>
+                            <ProjectDetail name={TOSDERNAME} detail={TOSDERDETAIL}/>
                         </>
 
                     }
                     </div>
                     <div className ="projectContainer">  
-                        <ProjectDetail name={serksa} detail={serksaDetail}/>
+                        <ProjectDetail name={EXPENSE} detail={EXPENSEDETAIL}/>
                         <ProjectFeature />
                     </div>
                     <div className ="projectContainer">

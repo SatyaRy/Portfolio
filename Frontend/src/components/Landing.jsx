@@ -3,17 +3,32 @@ import { Canvas } from "@react-three/fiber"
 import { Environment, OrbitControls,Float } from "@react-three/drei"
 import { AmbientLight } from "three"
 import { Suspense } from "react"
-import {motion} from "framer-motion"
+import {useMotionValue,useTransform, animate,motion} from "framer-motion"
 import Cyber from "../../public/panel/Panel"
 import pdf from "../assets/satyapdf.pdf"
 import { useNavigate } from "react-router-dom"
 import { Link } from "react-router-dom"
+import { useEffect } from "react"
 export default function Content(){
     const detail = "  I'm a Full Stack Developer passionate about building scalable, user-focused web applications. Skilled in both front-end and back-end development, I enjoy crafting seamless digital experiences and collaborating to solve complex challenges."
+    const skill = "I'm a Software Engineer"
+    const count = useMotionValue(0)
     const navigate = useNavigate()
     const handleClick =()=>{
         navigate("/about")
     }
+    const displaySkill = useTransform(count, (lastest) =>
+        skill.slice(0, Math.round(lastest))
+      );
+    useEffect(() => {
+        const controls = animate(count, skill.length, {
+          type: "tween",
+          duration: 3.5,
+          repeat: true,
+          ease: "easeInOut",
+        });
+        return controls.stop;
+      }, []);
     return(
            <>
             <div className="aboutMe">
@@ -21,7 +36,7 @@ export default function Content(){
                     <span>Hi, my name is</span>
                     <div className="intro">
                         <span>Ry Satya</span>
-                        <span>I'm a Software Engineer</span>
+                        <motion.span>{displaySkill}</motion.span>
                     </div>
                     <div className ="aboutDescription">
                         {detail}
